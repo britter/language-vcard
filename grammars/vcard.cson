@@ -3,3 +3,15 @@
 'fileTypes': [
   'vcf'
 ]
+'patterns': [
+  {
+    'captures':
+      '1':
+        'name': 'storage.type.vcard'
+      '2':
+        'name': 'storage.type.vcard'
+      '3':
+        'name': 'string.unquoted.vcard'
+    'match': '\\b([A-Z]*)(:)([A-Z]*)\\b'
+  }
+]
