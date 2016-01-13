@@ -15,6 +15,6 @@ describe 'vCard grammar', ->
   it 'finds BEGIN field with delimiter and value', ->
     {tokens} = grammar.tokenizeLine('BEGIN:VCARD')
 
-    expect(tokens[0]).toEqual value: 'BEGIN', scopes: ['source.vcard', 'storage.type.vcard']
-    expect(tokens[1]).toEqual value: ':', scopes: ['source.vcard', 'storage.type.vcard']
-    expect(tokens[2]).toEqual value: 'VCARD', scopes: ['source.vcard', 'string.unquoted.vcard']
+    expect(tokens[0]).toEqual value: 'BEGIN', scopes: ['source.vcard', 'meta.tag.any.vcard', 'entity.name.tag.vcard']
+    expect(tokens[1]).toEqual value: ':', scopes: ['source.vcard', 'meta.tag.any.vcard', 'punctuation.definition.tag.vcard']
+    expect(tokens[2]).toEqual value: 'VCARD', scopes: ['source.vcard']

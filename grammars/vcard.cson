@@ -5,13 +5,14 @@
 ]
 'patterns': [
   {
-    'captures':
+    'begin': '^([A-Z\\-]*)'
+    'beginCaptures':
       '1':
-        'name': 'storage.type.vcard'
-      '2':
-        'name': 'storage.type.vcard'
-      '3':
-        'name': 'string.unquoted.vcard'
-    'match': '\\b([A-Z]*)(:)([A-Z]*)\\b'
+        'name': 'entity.name.tag.vcard'
+    'end': '(:)'
+    'endCaptures':
+      '1':
+        'name': 'punctuation.definition.tag.vcard'
+    'name': 'meta.tag.any.vcard'
   }
 ]
