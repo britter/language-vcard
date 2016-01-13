@@ -5,14 +5,16 @@
 ]
 'patterns': [
   {
-    'begin': '^([A-Z\\-]*)'
+    'begin': '^([A-Z\\-]*)(;)?'
     'beginCaptures':
       '1':
         'name': 'entity.name.tag.vcard'
+      '2':
+        'name': 'punctuation.separator.key-value.vcard'
     'end': '(:)'
     'endCaptures':
       '1':
-        'name': 'punctuation.definition.tag.vcard'
+        'name': 'punctuation.separator.key-value.vcard'
     'name': 'meta.tag.any.vcard'
   }
 ]
